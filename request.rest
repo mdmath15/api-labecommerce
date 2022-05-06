@@ -6,8 +6,8 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 {
-    "name": "Math",
-    "email": "labecommerce-math@outlook.com",
+    "name": "Mathwe",
+    "email": "labecommerce-mathqwe@outlook.com",
     "password": "${2318jhdasgf320}2312"
 }
 
