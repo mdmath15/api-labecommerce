@@ -10,7 +10,7 @@ export const postPurchases = async (req: Request, res: Response): Promise<void> 
             throw new Error("Please check inputs. Missing values.")
         }
 
-        if (quantity < 1 || isNaN(Number(quantity))) {
+        if (quantity < 1 || typeof quantity !== "number") {
             res.statusCode = 422
             throw new Error("Please check inputs. Quantity must be a number greater than 0.")
         }

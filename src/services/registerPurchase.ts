@@ -9,9 +9,12 @@ export default async function registerPurchases(
     quantity: number
 ): Promise<void> {
     const id = generateId()
-    const product: Product = await selectProductById(productId)
+    const product: Product[] = await selectProductById(productId)
     
-    const totalPrice = product.price * quantity
+    const totalPrice = product.map((product: Product) => {
+        return product.price * quantity
+    })
+    
 
     await connection("labecommerce_purchases").insert({
         "id": id,
