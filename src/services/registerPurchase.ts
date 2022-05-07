@@ -15,7 +15,6 @@ export default async function registerPurchases(
         return product.price * quantity
     })
     
-
     await connection("labecommerce_purchases").insert({
         "id": id,
         "user_id": userId,
